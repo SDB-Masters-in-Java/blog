@@ -25,14 +25,11 @@
                     src="https://sdbjava.nl/wp-content/themes/sdb/public/img/icons/telefoon_los.png"></a>
 
             <ul>
-
-                <li id="menu-item-250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a
-                        href="/">Blog</a></li>
-                <li id="menu-item-249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a
-                        href="/authors">Authors</a></li>
-                <li id="menu-item-256"
-                    class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-246 current_page_item menu-item-256">
-                    <a href="/about">About</a></li>
+                {% for link in site.data.navigation %}
+                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+                {% endfor %}
             </ul>
         </nav>
     </div>
