@@ -84,3 +84,9 @@ a {
     }
   }
 }
+
+.menu-item a {
+  &:hover {
+    text-decoration: none;
+  }
+}
