@@ -1,0 +1,86 @@
+$code-background-color: #f9f3ee !default;
+$brand-color: #1e9dd9;
+$link-base-color: $brand-color;
+$link-hover-color: #f07e1d;
+$link-visited-color: darken($link-base-color, 15%) !default;
+
+%vertical-rhythm {
+  margin-bottom: $spacing-unit * .5;
+}
+
+/**
+ * Posts
+ */
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title,
+.post-content h1 {
+  @include relative-font-size(2.625);
+  letter-spacing: -1px;
+  line-height: 1.15;
+
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h1, h2, h3, h4, h5, h6 { margin-top: $spacing-unit }
+
+  h2 {
+    @include relative-font-size(1.75);
+
+  }
+
+  h3 {
+    @include relative-font-size(1.375);
+
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+  }
+
+  h5 {
+    @include relative-font-size(1.125);
+  }
+  h6 {
+    @include relative-font-size(1.0625);
+  }
+}
+
+.highlight {
+  border-radius: 3px;
+  background: $code-background-color;
+  @extend %vertical-rhythm;
+
+  .highlighter-rouge & {
+    background: $code-background-color;
+  }
+}
+
+/**
+ * Links
+ */
+a {
+  color: $link-base-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
+}

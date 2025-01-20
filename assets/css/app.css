@@ -1024,6 +1024,7 @@ a:hover {
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
 h1 {
+  color: #f07e1d;
   font-size: 2em;
   margin: 0.67em 0; }
 

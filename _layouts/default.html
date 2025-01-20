@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/app.css">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 
 <body class="page page-id-246 page-template-default" style="">
@@ -59,6 +60,9 @@
       <div class="row">
 
         <div class="col-md-12">
+          {%- if page.banner -%}
+          <img src="{{ page.banner }}" />
+          {%- endif -%}
 
           <div class="content-wrap content-wrap-text content-wrap-page">
             {{ content }}
