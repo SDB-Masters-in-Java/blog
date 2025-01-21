@@ -2243,7 +2243,6 @@ textarea {
   appearance: 0; }
 
 a {
-  display: block;
   text-decoration: none;
   outline: none;
   opacity: 1;
