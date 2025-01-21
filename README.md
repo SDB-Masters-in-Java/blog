@@ -12,13 +12,11 @@ Note that blog posts in the `_drafts` are not published.
 
 ### Work on a draft
 Create a blog post file in the `_drafts` folder and add the appropriate _frontmatter_ to the post.
-You can use this template file:
+You can use this template file, `first-post.md`:
 
 ```markdown
 ---
-layout: post
-title:  "My first Java Blogpost"
-date:   2025-01-02 19:30:45 +0000
+title:  "A first Java Blogpost"
 categories: java
 ---
 
@@ -38,3 +36,8 @@ docker run --rm \
 ```
 
 Now you should be able to view the site at [localhost:4000](http://localhost:4000)
+
+### Publishing a post
+
+Copy the draft you want to publish from the `_drafts` folder to the `_posts` folder and use the naming convention: `YEAR-MONTH-DAY-title.md`.
+And of course, push to GitHub
