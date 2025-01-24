@@ -3663,7 +3663,8 @@ img[data-unveil="true"] {
     margin-top: 0px;
     margin-bottom: 0px; }
   .w-content p {
-    margin-bottom: 0px; }
+    margin: 0 0 1.3em;
+  }
   .w-content .w-projects {
     padding-top: 50px; }
     .w-content .w-projects .logo {
