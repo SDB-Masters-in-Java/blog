@@ -17,9 +17,13 @@ layout: default
                 {{ mdate | date: date_format }}
             </time>
             {%- endif -%}
-            {% assign author = site.authors | where: 'short_name', page.author | first %}
-            {% if author %}
-            • <span><a href="{{ author.url }}">{{ author.name }}</a></span>
+            {% if page.author %}
+                {% assign author = site.authors | where: 'short_name', page.author | first %}
+                {% if author %}
+                • <span><a href="{{ author.url }}">{{ author.name }}</a></span>
+                {% else %}
+                • <span>{{ page.author }}</span>
+                {% endif %}
             {% endif %}
 
             </p>
