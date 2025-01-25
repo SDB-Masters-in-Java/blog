@@ -16144,3 +16144,12 @@ button.swiper-pagination-bullet {
   animation-name: slideOutUp; }
 
 /*# sourceMappingURL=app.css.map */
+
+.subsite-title {
+  margin: 10px 5px 10px 5px;
+  position: relative;
+  /*top: 10px;*/
+  font-size: 50px;
+  font-weight: bold;
+  color: #f07e1d;
+}
