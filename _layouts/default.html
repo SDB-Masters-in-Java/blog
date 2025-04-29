@@ -26,7 +26,7 @@
 
         <div class="col-md-12">
           {%- if page.banner -%}
-          <img src="{{ page.banner }}" />
+          <img src="{{ page.banner | relative_url }}" />
           {%- endif -%}
 
           <div class="content-wrap content-wrap-text content-wrap-page">

@@ -7,7 +7,7 @@ title: Authors
 <ul>
   {% for author in site.authors %}
     <li>
-      <h3><a href="{{ author.url }}">{{ author.name }}</a></h3>
+      <h3><a href="{{ author.url | relative_url }}">{{ author.name }}</a></h3>
       <h4>{{ author.position }}</h4>
       <p>{{ author.content | markdownify }}</p>
     </li>

@@ -6,7 +6,7 @@
         <div class="logo">
 
             <a href="https://sdbjava.nl">
-                <img src="/assets/images/logo.png" alt="">
+                <img src="{{ "/assets/images/logo.png" | relative_url }}" alt="">
             </a>
 
         </div>
@@ -29,7 +29,7 @@
             <ul>
                 {% for link in site.data.navigation %}
                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <a href="{{ link.url }}">{{ link.title }}</a>
+                    <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
                 </li>
                 {% endfor %}
             </ul>
