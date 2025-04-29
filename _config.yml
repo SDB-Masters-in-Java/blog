@@ -65,6 +65,7 @@ plugins:
 exclude:
   - README.md
   - .idea/
+  - vendor/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
