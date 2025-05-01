@@ -1,0 +1,43 @@
+{% comment %}
+Inspired by https://www.adamsdesk.com/posts/admonitions-jekyll/
+{% endcomment %}
+{% if include.type.size > 0 and include.title.size > 0 and include.body.size > 0 %}
+{% assign types = "note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote" | split: ", " %}
+{% if types contains include.type %}
+<div class="admonition {{ include.type }} rounded">
+
+    <p class="admonition-title">
+        {% case include.type %}
+        {% when 'note' %}
+        <i class="far fa-solid fa-pen" aria-hidden="true"></i>
+        {% when 'abstract' %}
+        <i class="far fa-solid fa-align-left"></i>
+        {% when 'info' %}
+        <i class="far fa-solid fa-circle-info"></i>
+        {% when 'tip' %}
+        <i class="far fa-solid fa-fire"></i>
+        {% when 'success' %}
+        <i class="far fa-solid fa-circle-check"></i>
+        {% when 'question' %}
+        <i class="far fa-solid fa-circle-question"></i>
+        {% when 'warning' %}
+        <i class="far fa-solid fa-triangle-exclamation"></i>
+        {% when 'failure' %}
+        <i class="far fa-solid fa-circle-xmark"></i>
+        {% when 'danger' %}
+        <i class="far fa-solid fa-bolt"></i>
+        {% when 'bug' %}
+        <i class="far fa-solid fa-bug"></i>
+        {% when 'example' %}
+        <i class="far fa-solid fa-list-ol"></i>
+        {% when 'quote' %}
+        <i class="far fa-solid fa-quote-right"></i>
+        {% endcase %}
+        {{ include.title }}
+    </p>
+    <p>
+        {{ include.body }}
+    </p>
+</div>
+{% endif %}
+{% endif %}

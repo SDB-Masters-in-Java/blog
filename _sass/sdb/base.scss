@@ -90,3 +90,11 @@ a {
     text-decoration: none;
   }
 }
+
+:root {
+  --bs-border-radius: 0.375rem;
+}
+
+.rounded {
+  border-radius: var(--bs-border-radius) !important;
+}
