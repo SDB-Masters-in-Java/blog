@@ -25,7 +25,21 @@ layout: default
                 • <span>{{ page.author }}</span>
                 {% endif %}
             {% endif %}
-
+            {% if page.read_time %}
+                <br/>
+                {% assign words_per_minute = page.words_per_minute | default: site.words_per_minute | default: 180 %}
+                {% assign words = page.content | strip_html | number_of_words %}
+                <span class="page__meta-readtime">
+                <i class="far fa-clock" aria-hidden="true"></i>
+                {% if words < words_per_minute %}
+                  less than 1 minute read
+                {% elsif words == words_per_minute %}
+                  1 "minute read"
+                {% else %}
+                  {{ words | divided_by: words_per_minute }} minute read
+                {% endif %}
+              </span>
+            {% endif %}
             </p>
     </header>
 
